@@ -1,6 +1,5 @@
 # inworld_api_bloodyBaron
- 
-# Inworld AI Web SDK
+
 
 The **Inworld AI Web SDK** enables Developers to easily integrate AI characters into your browser. 
 
