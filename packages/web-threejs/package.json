@@ -1,0 +1,49 @@
+{
+  "name": "@inworld/web-threejs",
+  "version": "1.6.0",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "description": "The Inworld Three.js library for the Web SDK. Includes Innequin, and Ready Player Me avatars ready to be used in a Three.js scene.",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "keywords": [
+    "inworld",
+    "ai",
+    "asr",
+    "character",
+    "npc",
+    "speech recognition",
+    "text to speech",
+    "tts",
+    "voice"
+  ],
+  "author": {
+    "name": "Theai, Inc.",
+    "url": "https://www.inworld.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inworld-ai/inworld-web-sdk.git"
+  },
+  "scripts": {
+    "build": "tsc -p . && shx cp -r ../../LICENSE.md ./",
+    "release:pack": "yarn build && yarn pack",
+    "release:publish": "yarn build && yarn npm publish",
+    "release:bump": "release-it",
+    "lint:check": "eslint --cache  \"./**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.eslintignore --config ../../.eslintrc.json",
+    "lint:fix": "yarn run lint:check --fix",
+    "prettier:check": "prettier --check \"./**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.eslintignore --config ../../.prettierrc.json",
+    "prettier:format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.eslintignore --config ../../.prettierrc.json",
+    "minify": "rollup --config rollup.config.mjs"
+  },
+  "devDependencies": {
+    "@types/three": "^0.164.0",
+    "@types/uuid": "^9.0.0",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "@inworld/web-core": "2.6.0",
+    "three": "^0.164.0",
+    "three-stdlib": "^2.29.11",
+    "uuid": "^9.0.1"
+  }
+}

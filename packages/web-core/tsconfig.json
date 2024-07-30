@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "rootDirs": [
+      "src"
+    ],
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "es2015",
+    "types": [
+      "jest",
+      "node"
+    ],
+  },
+  "include": [
+    "src/**/*",
+    "proto/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "tsc-alias": {
+    "verbose": true,
+    "resolveFullPaths": true,
+    "replacers": {
+      "jsonReplacer": {
+        "enabled": true,
+        "file": "./replacers/json.cjs"
+      }
+    },
+    "fileExtensions": {
+      "inputGlob": "{js,jsx,mjs,ts,tsx}",
+      "outputCheck": ["json"]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+coverage
+build
+proto
+dist
+node_modules
+.eslintcache
+/examples/*/public/assets/*
+/examples/*/public/draco-gltf/*
+**/draco-gltf/*
+**/docs/*

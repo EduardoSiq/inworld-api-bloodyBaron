@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  pull_request:
+
+jobs:
+  build-pr:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: build-a-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+      - name: Run build
+        uses: ./.github/actions/build_package
+      - name: Run tests
+        run: yarn test
+      - name: Ensure working directory is clean
+        uses: CatChen/check-git-status-action@v1
+        with:
+          fail-if-not-clean: true
+          request-changes-if-not-clean: false
