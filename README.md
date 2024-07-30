@@ -17,7 +17,7 @@ Clone o projeto
 Entre no diretório do gerador de token
 
 ```bash
-  cd examples generate_token
+  cd examples/generate_token
 ```
 
 Instale e rode o Yarn
@@ -27,6 +27,11 @@ Instale e rode o Yarn
 ```
 
 Abra ao mesmo tempo o diretório do chat
+```bash
+  cd examples/chat
+```
+
+Instale e rode o Yarn
 ```bash
   yarn install
   yarn start
